@@ -1,0 +1,8 @@
+.env
+hanzi.txt
+hanzi.zip
+hanzi.decrypted.txt
+hanzi.decompressed.zip
+node_modules/
+dist/
+decompressed/
