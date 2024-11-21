@@ -1,6 +1,8 @@
 .env
 hanzi.txt
 hanzi.zip
+hanzi.data
+hanzi.idx
 hanzi.decrypted.txt
 hanzi.decompressed.zip
 node_modules/
