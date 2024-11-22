@@ -8,12 +8,12 @@ dotenv.config(); // 加载 .env 文件
 
 // 配置常量
 const KEY = process.env.SM4_KEY || ""; // SM4 密钥，16 字节
-const INPUT_DATA = path.resolve(__dirname, "../hanzi.data");
-const INPUT_IDX = path.resolve(__dirname, "../hanzi.idx");
-const COMPRESSED_FILE = path.resolve(__dirname, "../hanzi.zip");
-const ENCRYPTED_FILE = path.resolve(__dirname, "../hanzi.bin");
-const DECOMPRESSED_FILE = path.resolve(__dirname, "../hanzi.decompressed.zip");
-const DECRYPTED_PATH = path.resolve(__dirname, "../decrompressed/");
+// const INPUT_DATA = path.resolve(__dirname, "../hanzi.data");
+// const INPUT_IDX = path.resolve(__dirname, "../hanzi.idx");
+const COMPRESSED_FILE = path.resolve(__dirname, "../basic.zip");
+const ENCRYPTED_FILE = path.resolve(__dirname, "../basic.bin");
+const DECOMPRESSED_FILE = path.resolve(__dirname, "../basic.decompressed.zip");
+const DECRYPTED_PATH = path.resolve(__dirname, "../decompressed/");
 
 // 压缩文件
 function compressFile(
@@ -64,7 +64,7 @@ function decompressFile(inputPath: string, outputPath: string): void {
 // 主流程
 function main() {
   // Step 1: 压缩 hanzi.txt -> hanzi.zip
-  compressFile(INPUT_DATA, INPUT_IDX, COMPRESSED_FILE);
+  // compressFile(INPUT_DATA, INPUT_IDX, COMPRESSED_FILE);
 
   // Step 2: 加密 hanzi.zip -> hanzi.bin
   encryptFile(COMPRESSED_FILE, ENCRYPTED_FILE, KEY);
